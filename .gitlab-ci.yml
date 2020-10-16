@@ -77,7 +77,7 @@ deploy_local:
     EXPOSE_PORT: 43434
     APP_PORT: 42424
   script:
-    - export CONFIG_FILE=appsettings.${DEPLOY_ENV}.json
+    #- export CONFIG_FILE=appsettings.${DEPLOY_ENV}.json
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "mkdir -p $WORKING_PATH"
     #- scp ./configs/$CONFIG_FILE $SERVER_USER@$SERVER_IP:$WORKING_PATH
     - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP
