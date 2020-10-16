@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/framework/aspnet:3.5
+FROM mcr.microsoft.com/dotnet/framework/aspnet
 CMD sc config aspnet_state start=auto
 CMD net start aspnet_state
 CMD powershell Set-ItemProperty Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters -Name  AllowRemoteConnection -Value 1
