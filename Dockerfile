@@ -5,5 +5,4 @@ CMD powershell Set-ItemProperty Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentContr
 CMD net stop aspnet_state
 CMD net start aspnet_state
 EXPOSE 42424
-ENTRYPOINT ["powershell"]
-CMD Start-Service aspnet_state
+ENTRYPOINT ["powershell","Start-Service aspnet_state"]
